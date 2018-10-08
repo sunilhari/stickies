@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import './Home.scss';
+import './toastr.css';
+
+const toastr =require('toastr');
 class Home extends Component {
     constructor() {
         super();
@@ -26,10 +29,11 @@ class Home extends Component {
                     understanding: '',
                     isPosttEmpty: true
                 });
+                toastr.success('Response duly noted!!!');
                 this.refs.understanding.value = '';
             })
             .catch(function (error) {
-                console.log(error);
+                toastr.error(error);
             });
     }
     render() {
@@ -39,7 +43,7 @@ class Home extends Component {
                     <div className="card">
                         <div className="card-block">
                             <form className="understanding-form" action="/understanding" method='POST'>
-                                <div className="form-group col-lg-12 ">
+                                <div className="form-group col-lg-12 understanding-form__textaread-wrapper">
                                     <textarea ref="understanding" autoCorrect="true" className="form-control" id="understanding" name="understanding" rows="6" onInput={this.handleUnderstanding} placeholder="what is your understanding on Node.js"></textarea>
                                 </div>
                                 <div className="form-group col-lg-12 d-flex justify-content-center align-items-center">
