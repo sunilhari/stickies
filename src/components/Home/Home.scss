@@ -1,0 +1,23 @@
+.capture-understanding {
+  height: 100%;
+  width: 100%;
+  margin-top:50px;
+  .understanding-form{
+    padding:20px;
+    margin:30px;
+  }
+
+  .wrapper {
+    width:40%;
+    height:40%;
+    min-width: 300px;
+    min-height: 300px;
+    
+  }
+  textarea {
+     resize: none;
+  }
+  .card-header {
+    color:black;
+  }
+}

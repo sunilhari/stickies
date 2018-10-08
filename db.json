@@ -1,0 +1,16 @@
+{
+  "posts": [
+    {
+      "understanding": "First Post"
+    },
+    {
+      "understanding": "Another Post"
+    },
+    {
+      "understanding": "One more post"
+    },
+    {
+      "understanding": "Again another post"
+    }
+  ]
+}
